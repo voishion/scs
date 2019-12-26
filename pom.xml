@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.nuctech.springcloud</groupId>
+    <artifactId>scs</artifactId>
+    <version>1.0.0</version>
+
+    <name>scs</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!--
+        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
+        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
+
+        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        -->
+        <spring-boot.version>1.5.19.RELEASE</spring-boot.version>
+        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
+
+        <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <druid.version>1.1.10</druid.version>
+        <mysql-connector.version>5.1.47</mysql-connector.version>
+        <mybatis-starter.version>1.3.3</mybatis-starter.version>
+        <logback.version>1.2.3</logback.version>
+        <lombok.version>1.18.6</lombok.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.0.4</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.0.31</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.3.0</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>1.2.3</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>scs-api</module>
+        <module>scs-provider-dept-8001</module>
+        <module>scs-provider-dept-8002</module>
+        <module>scs-provider-dept-8003</module>
+        <module>scs-eureka-7001</module>
+        <module>scs-eureka-7002</module>
+        <module>scs-eureka-7003</module>
+        <module>scs-consumer-dept-80</module>
+        <module>scs-consumer-dept-feign</module>
+        <module>scs-provider-dept-hystrix-8001</module>
+        <module>scs-consumer-hystrix-dashboard</module>
+    </modules>
+
+    <build>
+        <!--finalName 父工程名称-->
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!--过滤开启-->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
