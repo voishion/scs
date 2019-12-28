@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      # 本次服务启动后，先去找3344服务，通过SpringCloudConfig获取github上的配置
+      uri: http://configserver.com:3344
+      # 在github上的版本
+      label: master
+      # 需要从github上读取的服务的资源名称，注意没有yml后缀
+      name: scs-config-dept-client
+      # 本次访问的配置项
+      #profile: dev
+      profile: test

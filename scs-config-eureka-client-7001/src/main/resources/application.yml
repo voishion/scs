@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: scs-config-eureka-client                                       # 应用名称（会注册进EurekaServer且全部字符串为大写）
