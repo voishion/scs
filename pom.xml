@@ -96,6 +96,7 @@
         <module>scs-provider-dept-hystrix-8001</module>
         <module>scs-consumer-hystrix-dashboard</module>
 		<module>scs-zuul-gateway-9527</module>
+		<module>scs-config-3344</module>
 	</modules>
 
     <build>
