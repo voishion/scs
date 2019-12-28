@@ -4,7 +4,7 @@
 
 - 项目是基于[gongxings/spring-cloud-study](https://github.com/gongxings/spring-cloud-study)项目，在自己的理解的基础上又写了一遍
 
-![Springcloud架构图](/images/springcloud架构图.png)
+![Springcloud架构图](images/springcloud架构图.png)
 
 ## 项目版本(比较老的版本了)
 
@@ -34,11 +34,11 @@ scs
 ```
 ## CAP理论
 
-![CAP理论](/images/CAP理论.png)
+![CAP理论](images/CAP理论.png)
 
 ## Hosts映射修改
 
-![Hosts映射修改](/images/hosts映射修改.png)
+![Hosts映射修改](images/hosts映射修改.png)
 
 ## 项目启动
 
@@ -47,7 +47,7 @@ scs
    - [scs-eureka-7001](https://github.com/voishion/scs/tree/master/scs-eureka-7002)
    - [scs-eureka-7001](https://github.com/voishion/scs/tree/master/scs-eureka-7003)
    
-   ![eureka注册中心说明](/images/eureka注册中心.png)
+   ![eureka注册中心说明](images/eureka注册中心.png)
    
 2. 启动微服务提供者集群：
    - [scs-provider-dept-8001 (连01数据库)](https://github.com/voishion/scs/tree/master/scs-provider-dept-8001)
