@@ -1,14 +1,12 @@
 # 请保存为UTF-8格式
 server:
   port: 8001
-
----
 spring:
-  profiles: dev
+  application:
+    name: scs-config-dept-client                         # 应用名称（会注册进EurekaServer且全部字符串为大写）
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource         # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver           # mysql驱动包
-    url: jdbc:mysql://localhost:3306/scs01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
     username: root
     password: abc123
     dbcp2:
@@ -16,18 +14,14 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/scs01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
 
 ---
 spring:
   profiles: test
   adatasource:
-    type: com.alibaba.druid.pool.DruidDataSource         # 当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver           # mysql驱动包
     url: jdbc:mysql://localhost:3306/scs02?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
-    username: root
-    password: abc123
-    dbcp2:
-      min-idle: 5
-      initial-size: 5
-      max-total: 5
-      max-wait-millis: 200
