@@ -1,0 +1,17 @@
+# 请保存为UTF-8格式
+spring:
+  profiles:
+    active: dev
+---
+# 开发环境
+spring:
+  profiles: dev
+  application:
+    name: springcloud-study-config-dev
+
+---
+# 测试环境
+spring:
+  profiles: test
+  application:
+    name: springcloud-study-config-test
