@@ -36,8 +36,8 @@ eureka:
 info:
   app.name: 微服务架构
   company.name: www.voishion.com
-  build.artifactId: ${project.artifactId}
-  build.version: ${project.version}
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
 
 ---
 server:
@@ -73,6 +73,6 @@ eureka:
 info:
   app.name: 微服务架构
   company.name: www.voishion.com
-  build.artifactId: ${project.artifactId}
-  build.version: ${project.version}
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
 
