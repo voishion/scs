@@ -6,12 +6,12 @@ spring:
 # 开发环境
 spring:
   profiles: dev
-  application:
-    name: springcloud-study-config-dev
+#  application:
+#    name: springcloud-study-config-dev
 
 ---
 # 测试环境
 spring:
   profiles: test
-  application:
-    name: springcloud-study-config-test
+#  application:
+#    name: springcloud-study-config-test
