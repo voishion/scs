@@ -2,11 +2,7 @@
 server:
   port: 8001
 spring:
-  application:
-    name: scs-config-dept-client                         # 应用名称（会注册进EurekaServer且全部字符串为大写）
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource         # 当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver           # mysql驱动包
     username: root
     password: abc123
     dbcp2:
