@@ -1,0 +1,33 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: scs-zuul-gateway-9527
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ # [集群]
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+#路由访问映射规则
+zuul:
+  routes:
+    # 服务ID
+    dept.serviceId: scs-dept
+    # 服务对外暴露地址
+    dept.path: /d/**
+  # 忽略原真实服务名,多个可以用"*"
+  ignored-services: scs-dept
+  # 设置统一公共前缀
+  prefix: /scs
+
+# Actuator Info信息配置
+info:
+  app.name: 微服务架构
+  company.name: www.voishion.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

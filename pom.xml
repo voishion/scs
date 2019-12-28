@@ -95,7 +95,8 @@
         <module>scs-consumer-dept-feign</module>
         <module>scs-provider-dept-hystrix-8001</module>
         <module>scs-consumer-hystrix-dashboard</module>
-    </modules>
+		<module>scs-zuul-gateway-9527</module>
+	</modules>
 
     <build>
         <!--finalName 父工程名称-->
