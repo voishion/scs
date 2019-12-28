@@ -1,6 +1,6 @@
 # Spring Cloud学习项目
 
-## 觉得整理的不错的朋友，star一下哟（^V^）
+## 欢迎star，以兹鼓励哟（^V^）
 
 - 项目是基于[gongxings/spring-cloud-study](https://github.com/gongxings/spring-cloud-study)项目，在自己的理解的基础上又写了一遍
 
